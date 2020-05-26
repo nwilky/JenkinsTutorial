@@ -4,6 +4,7 @@ pipeline {
         stage('build') {
             steps {
                 sh 'echo "Hello from Jenkins Pipeline!"'
+		sh 'echo "new line just added."'
             }
         }
     }
