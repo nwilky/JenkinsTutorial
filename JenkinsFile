@@ -1,12 +1,17 @@
 pipeline {
     agent any
     stages {
-        stage('build') {
+        stage('Build') {
             steps {
                 sh 'echo "Hello from Jenkins!"'
             }
         }
-        stage('deploy') {
+        stage('Artifact Generation') {
+            steps{
+                sh 'echo "We are generating artifacts for ${BUILD_NUMBER}" > output.txt'
+            }
+        }
+        stage('Staging') {
             steps {
                 sh 'echo "Deploy to Staging Environment!"'
             }
