@@ -6,5 +6,10 @@ pipeline {
                 sh 'echo "Hello from Jenkins!"'
             }
         }
+        stage('deploy') {
+            steps {
+                sh 'echo "Deploy to Staging Environment!"'
+            }
+        }
     }
 }
